@@ -64,5 +64,10 @@ export const env = {
     enabled: process.env.ANALYTICS_ENABLED === 'true',
     key: process.env.ANALYTICS_KEY || '',
   },
+
+  // GitHub
+  github: {
+    token: process.env.GITHUB_TOKEN || '',
+  },
 } as const
 
