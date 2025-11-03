@@ -1,18 +1,40 @@
-# GrindFlow - Next.js
+<div align="center">
 
-A peer-powered study notes platform built with Next.js, TypeScript, and Supabase.
+<h1>GrindFlow</h1>
 
-## Features
+Peer‑powered study notes platform built with Next.js, TypeScript, Tailwind, and Supabase.
 
-- ✨ AI-assisted note scoring & suggestions
-- 🧭 Flow maps & adaptive study steps
-- 🧠 Auto-generated quizzes
-- 💸 Earn coins for sharing high-quality notes
-- 📤 Document upload and management
-- 🔐 Authentication with Supabase
-- 💰 Wallet system for transactions
+<p>
+  <a href="https://github.com/puravbhatt0504/grindflow"><img alt="Repo" src="https://img.shields.io/badge/GitHub-grindflow-24292f?logo=github&logoColor=white"></a>
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-14-black?logo=nextdotjs">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white">
+  <img alt="Tailwind" src="https://img.shields.io/badge/TailwindCSS-3-38bdf8?logo=tailwindcss&logoColor=white">
+  <img alt="Supabase" src="https://img.shields.io/badge/Supabase-Platform-3fcf8e?logo=supabase&logoColor=white">
+</p>
 
-## Getting Started
+<img alt="GrindFlow Logo" src="./public/49081F90-0AE7-46AD-BAF4-D21147D31B37_1_201_a.jpeg" width="220" />
+
+</div>
+
+## ✨ Features
+
+- AI‑assisted note scoring & suggestions
+- Study flows with adaptive steps
+- Auto‑generated quizzes and practice
+- Document upload, management, and public library
+- Supabase auth (Google OAuth)
+- Minimal, modern UI with tasteful animations
+
+## 📦 Tech Stack
+
+- Next.js App Router (server components + server actions)
+- TypeScript, ESLint
+- Tailwind CSS
+- Supabase (Auth, Storage)
+- framer‑motion (micro‑interactions on About page)
+- sonner (toasts)
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -26,7 +48,7 @@ A peer-powered study notes platform built with Next.js, TypeScript, and Supabase
 npm install
 ```
 
-2. Environment variables are configured in `.env.local` (already set up):
+2. Create `.env.local` with the following variables:
 
 **Supabase Configuration:**
 - `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
@@ -54,12 +76,10 @@ npm install
 - `LLM_API_KEY` - LLM API key
 - `IMAGE_API_KEY` - Image generation API key
 
-**Optional Services:**
-- `REDIS_URL` - Redis connection (for BullMQ)
-- `SMTP_*` - Email configuration
-- `ANALYTICS_*` - Analytics configuration
+**GitHub (server-only):**
+- `GITHUB_TOKEN` - Used to fetch team avatars on `/about`
 
-**Note:** The `.env.local` file is already created with all your credentials. Variables with `NEXT_PUBLIC_` prefix are exposed to the client-side. Never expose service role keys or API keys without the prefix!
+**Note:** Variables prefixed with `NEXT_PUBLIC_` are exposed to the client. Never expose service role keys or tokens without this prefix.
 
 3. Run the development server:
 ```bash
@@ -68,7 +88,7 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Project Structure
+## 🧭 Project Structure
 
 ```
 grindflow/
@@ -82,27 +102,39 @@ grindflow/
 ├── components/       # React components
 │   ├── Sidebar.tsx
 │   ├── Header.tsx
-│   └── Footer.tsx
+│   ├── Footer.tsx
+│   └── about/TeamGrid.tsx
 ├── lib/             # Utilities
 │   ├── supabase.ts  # Supabase client
 │   └── api.ts       # API helpers
 └── public/          # Static assets
 ```
 
-## Technologies Used
+## 🛡️ Image domains
 
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Supabase** - Authentication and database
-- **Sonner** - Toast notifications
+External images used by Next/Image are configured in `next.config.js`:
 
-## Available Scripts
+- `avatars.githubusercontent.com`
+- `ui-avatars.com`
+
+## 🧪 Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+
+## 🔗 Official Repository
+
+- Project code: [puravbhatt0504/grindflow](https://github.com/puravbhatt0504/grindflow)
+
+## 🙌 Team
+
+- Purav Bhatt — Project Coordinator — GitHub: `puravbhatt0504`
+- Shreya Jha — Full Stack developer and lots of moral support — GitHub: `whoshrey`
+- Devyani Dadawal — AI Lead & Full Stack developer — GitHub: `devyanidadwal`
+- Piyush Thakur — Flutter Developer (Mobile apps) — GitHub: `Piyush-Fr`
+- Tushar Kaushik — Full Stack developer — GitHub: `Tusharkaushik1106`
 
 ## License
 

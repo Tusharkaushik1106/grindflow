@@ -126,11 +126,11 @@ export default function Sidebar({ activeView, onViewChange, username }: SidebarP
   return (
     <aside className="w-[260px] p-6 flex flex-col gap-[18px] bg-gradient-to-b from-white/2 to-white/1 border-r border-white/3 min-h-screen">
       <div className="flex gap-3 items-center">
-        <div className="w-18 h-14 rounded-xl bg-gradient-to-br from-accent to-[#9ad4ff] overflow-hidden">
+        <div className="w-18 h-14 rounded-xl bg-gradient-to-br from-accent to-[#9ad4ff] overflow-hidden flex items-center justify-center">
   <img 
     src="/49081F90-0AE7-46AD-BAF4-D21147D31B37_1_201_a.jpeg" 
     alt="Logo" 
-    className="w-full h-full "
+    className="h-full w-auto object-contain"
   />
 </div>
         <div>
@@ -175,6 +175,21 @@ export default function Sidebar({ activeView, onViewChange, username }: SidebarP
             </motion.button>
           )
         })}
+
+        {/* About the team direct link */}
+        <motion.button
+          key="about"
+          onClick={() => router.push('/about')}
+          className={`group relative text-left px-3 py-2.5 rounded-[10px] border-none bg-transparent text-inherit cursor-pointer flex items-center gap-2 transition-colors`}
+          whileHover={{ x: 2 }}
+        >
+          <span className={`inline-flex items-center justify-center w-7 h-7 rounded-md bg-white/5 text-white/70 group-hover:text-white`}>
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.52 2.865 8.35 6.839 9.703c.5.096.683-.22.683-.49c0-.242-.01-1.048-.015-1.901c-2.782.616-3.37-1.215-3.37-1.215c-.455-1.177-1.11-1.49-1.11-1.49c-.908-.64.069-.627.069-.627c1.003.072 1.53 1.05 1.53 1.05c.892 1.57 2.341 1.116 2.91.853c.091-.665.35-1.116.636-1.373c-2.222-.258-4.555-1.144-4.555-5.09c0-1.124.387-2.043 1.021-2.763c-.103-.258-.443-1.3.097-2.71c0 0 .836-.275 2.74 1.055A9.29 9.29 0 0 1 12 6.844c.847.004 1.7.117 2.497.343c1.902-1.33 2.737-1.055 2.737-1.055c.542 1.41.202 2.452.1 2.71c.636.72 1.02 1.639 1.02 2.763c0 3.957-2.337 4.828-4.565 5.082c.36.32.682.948.682 1.912c0 1.38-.013 2.493-.013 2.832c0 .272.18.592.688.49C19.138 20.6 22 16.77 22 12.252C22 6.588 17.523 2 12 2Z"/>
+            </svg>
+          </span>
+          <span className="truncate">About the team</span>
+        </motion.button>
       </nav>
 
       <div className="mt-auto flex flex-col gap-2">
