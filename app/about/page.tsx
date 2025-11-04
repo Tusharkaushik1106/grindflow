@@ -11,7 +11,7 @@ type TeamMember = {
 const TEAM: TeamMember[] = [
   { name: 'Purav Bhatt', role: 'Project Coordinator', githubUsername: 'puravbhatt0504', linkedinSlug: 'pb0504' },
   { name: 'Shreya Jha', role: 'Full Stack developer and lotss of moral support', githubUsername: 'whoshrey', linkedinSlug: 'shreya-jha-' },
-  { name: 'Devyani Dadawal', role: 'AI Lead &  Full Stack developer', githubUsername: 'devyanidadwal', linkedinSlug: 'devyani-dadwal-882484301' },
+  { name: 'Devyani Dadwal', role: 'AI Lead &  Full Stack developer', githubUsername: 'devyanidadwal', linkedinSlug: 'devyani-dadwal-882484301' },
   { name: 'Piyush Thakur', role: 'Flutter Developer (Mobile apps)', githubUsername: 'Piyush-Fr', linkedinSlug: 'piyushthakur01' },
   { name: 'Tushar Kaushik', role: 'Full Stack developer', githubUsername: 'Tusharkaushik1106', linkedinSlug: 'tushar1106' },
 ]
