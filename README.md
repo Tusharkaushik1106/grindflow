@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>GrindFlow</h1>
+<h1>GrindFlowC</h1>
 
 Peer‑powered study notes platform built with Next.js, TypeScript, Tailwind, and Supabase.
 
